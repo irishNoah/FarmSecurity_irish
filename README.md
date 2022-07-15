@@ -37,4 +37,14 @@
 ## 순서도
 ![FarmSecurity_FlowChart](https://user-images.githubusercontent.com/80700537/179218577-c5aa5d2d-a47b-4818-831c-6e1da456e6f2.JPG)
 
-## 개발 tool
+## 사용 Tool / 사이트 / 프레임워크
+|   구분   |                      사용 Tool                       |     
+| :------: | :-----------------------------------------------:|
+| 언어 |                Python                |
+| 데이터 수집 |              Python / Kaggle 등                |
+| 데이터 train & test |   Goolge Colab Pro & Yolov4  |
+| 프론트엔드 |  Raact.Js & Android Studio |
+| 백엔드 | Node.Js  |
+| DB | MySQL  |
+| 데브옵스 | Github  |
+| 협업 tool| Jira  |
