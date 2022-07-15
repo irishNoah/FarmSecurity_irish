@@ -38,13 +38,56 @@
 ![FarmSecurity_FlowChart](https://user-images.githubusercontent.com/80700537/179218577-c5aa5d2d-a47b-4818-831c-6e1da456e6f2.JPG)
 
 ## 사용 Tool / 사이트 / 프레임워크
-|   구분   |                      사용 Tool                       |     
+| 구분 | 사용 Tool / 사이트 / 프레임워크 |     
 | :------: | :-----------------------------------------------:|
-| 언어 |                Python                |
-| 데이터 수집 |              Python / Kaggle 등                |
-| 데이터 train & test |   Goolge Colab Pro & Yolov4  |
-| 프론트엔드 |  Raact.Js & Android Studio |
-| 백엔드 | Node.Js  |
-| DB | MySQL  |
-| 데브옵스 | Github  |
-| 협업 tool| Jira  |
+| 언어 | Python |
+| 데이터 수집 | Python / Kaggle 등 |
+| 데이터 train & test | Goolge Colab Pro & Yolov4 |
+| 프론트엔드 | Raact.Js & Android Studio |
+| 백엔드 | Node.Js|
+| DB | MySQL|
+| 데브옵스 | Github|
+| 협업 tool| Jira |
+
+## 개발 과정
+1) Yolo v4 vs v5 선택
+![1234](https://user-images.githubusercontent.com/80700537/179221837-d6928d6d-3a25-4477-b081-6f0d94b96021.JPG)
+> 참고 링크 : https://yong0810.tistory.com/30
+- v5로 선택할 시 좀 더 정확한 인식률 등을 기대할 수 있으나, 이것은 모델 성능 향상에 따른 인식률 등의 개선이지, 연구자 등의 노력으로 인한 개선이 아님
+- 이러한 점과 연구 목적에 맞는 v4가 좀 더 합당하다고 판단하여 v4로 최종적으로 선택하였음
+<br><br>
+2) yolov4의 Darknet으로 공부 및 연구 진행<br>
+--- 작성 해야 함 ---
+<br><br>
+3) 비교(IOU / Avg Loss / Accuracy / Iteratoin 캡처 등)<br>
+--- 작성 해야 함 ---
+<br><br>
+4) 에러 및 처리<br>
+--- 작성 해야 함 ---
+<br><br>
+5) 기타<br>
+--- 작성 해야 함 ---
+<br><br>
+
+## 성과 및 기대 효과
+1. 농작물 재배 편의성 측면
+- 농경지 면적이 많은 전남, 경북 등의 농업 종사자에게 무인 시스템을 제공함으로써 농작물 피해 규모 완화<br><br>
+
+2. 지역 경제 활성화 측면 
+- 질 좋은 농작물 재배 및 수출을 통해 지역 경제 활성화
+- 양질의 농작물 재배를 통한 해외 농작물 수입 억제 
+
+## 참여 대회
+1. 2022 KOAT 아이디어 경진대회
+2. 2022 청소년/청년 아이디어 경진대회
+
+
+
+
+
+
+
+
+
+
+
