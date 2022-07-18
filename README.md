@@ -50,8 +50,8 @@
 | 협업 tool| Jira |
 
 ## 개발 과정
-1) Yolo v4 vs v5 선택
-![1234](https://user-images.githubusercontent.com/80700537/179221837-d6928d6d-3a25-4477-b081-6f0d94b96021.JPG)
+1) Yolo v4 vs v5 선택<br>
+![1234](https://user-images.githubusercontent.com/80700537/179221837-d6928d6d-3a25-4477-b081-6f0d94b96021.JPG) <br>
 > 참고 링크 : https://yong0810.tistory.com/30 <br>
 :heavy_check_mark: v5로 선택할 시 좀 더 정확한 인식률 등을 기대할 수 있으나, 이것은 모델 성능 향상에 따른 인식률 등의 개선이지, 연구자 등의 노력으로 인한 개선이 아님<br>
 :heavy_check_mark: 이러한 점과 연구 목적에 맞는 v4가 좀 더 합당하다고 판단하여 v4로 최종적으로 선택하였음<br>
