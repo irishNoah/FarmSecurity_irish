@@ -3,7 +3,7 @@
 ## :bell: 프로젝트 주제
 > AI를 이용한 농작물 피해 완화 시스템
 
-## 개발 배경
+## :sun_with_face: 개발 배경
 ![동물별 농작물 피해 규모](https://user-images.githubusercontent.com/80700537/179216377-5c0d525e-64dd-4a1e-8bd0-22841a7d0f2d.JPG)
 > > [표 1] : 동물별 농작물 피해실태(환경부 생물다양성과/연도별 유해생물에 의한 피해현황(2014~2018)/2019)
 
@@ -13,11 +13,11 @@
 :heavy_check_mark: 새 부분에서는 꿩, 까치, 오리류 순으로 피해 규모가 큼 <br>
 > 새도 과학적으로 동물에 포함되나, 해당 프로젝트에서는 동물은 새가 아닌 동물로 지정하여, 동물과 새로 구분하였음
 
-## 개발 목적
+## :fire: 개발 목적
 :heavy_check_mark: 개발 배경을 통해 확인할 수 있는 피해 규모 완화 위해 사람이 직접 유해야생동물 포획 시 인건비, 안전 등 고려요소가 많음<br>
 :heavy_check_mark: 이에 따라, 사람 이외의 피해 규모 완화 위한 무인 시스템 필요성을 느껴 해당 프로젝트 개발<br>
 
-## 개발 설계
+## :sweat_drops: 개발 설계
 1. 객체 탐지를 위해 AI 활용<br>
 :heavy_check_mark: 객체는 [사람/동물/새/사물]로 구분<br>
 :heavy_check_mark: 객체 중 새 및 동물은 퇴치 대상에 해당 <br><br>
@@ -34,10 +34,10 @@
 4. 애플리케이션을 통한 퇴치 알림 서비스<br>
 :heavy_check_mark: 퇴치 대상 식별 및 퇴치 단계, 퇴치 여부를 농장 주인에게 알림<br> 
 
-## 순서도
+## :chart: 순서도
 ![FarmSecurity_FlowChart](https://user-images.githubusercontent.com/80700537/179218577-c5aa5d2d-a47b-4818-831c-6e1da456e6f2.JPG)
 
-## 사용 Tool / 사이트 / 프레임워크
+## :dart: 사용 Tool / 사이트 / 프레임워크
 | 구분 | 사용 Tool / 사이트 / 프레임워크 |     
 | :------: | :-----------------------------------------------:|
 | 언어 | Python |
@@ -49,7 +49,7 @@
 | 데브옵스 | Github|
 | 협업 tool| Jira |
 
-## 개발 과정
+## :factory: 개발 과정
 1) Yolo v4 vs v5 선택<br>
 ![1234](https://user-images.githubusercontent.com/80700537/179221837-d6928d6d-3a25-4477-b081-6f0d94b96021.JPG) <br>
 > 참고 링크 : https://yong0810.tistory.com/30 <br>
@@ -69,7 +69,7 @@
 --- 작성 해야 함 ---
 <br><br>
 
-## 성과 및 기대 효과
+## :rocket: 성과 및 기대 효과
 1. 농작물 재배 편의성 측면<br>
 :heavy_check_mark: 농경지 면적이 많은 전남, 경북 등의 농업 종사자에게 무인 시스템을 제공함으로써 농작물 피해 규모 완화<br><br>
 
@@ -77,7 +77,7 @@
 :heavy_check_mark: 질 좋은 농작물 재배 및 수출을 통해 지역 경제 활성화<br>
 :heavy_check_mark: 양질의 농작물 재배를 통한 해외 농작물 수입 억제<br>
 
-## 참여 대회
+## :checkered_flag: 참여 대회
 1. 2022 KOAT 아이디어 경진대회<br>
 [제출 파일 다운로드하러 가기](https://github.com/irishNoah/FarmSecurity_irish/blob/main/contest_exhibit/2022_KOAT/%EB%B0%95%EC%B0%BD%EC%98%81_2022_KOAT%ED%98%81%EC%8B%A0%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4%EA%B3%B5%EB%AA%A8%EC%A0%84_AI%EB%A5%BC%EC%9D%B4%EC%9A%A9%ED%95%9C%EB%86%8D%EC%9E%91%EB%AC%BC%ED%94%BC%ED%95%B4%EC%99%84%ED%99%94%EC%8B%9C%EC%8A%A4%ED%85%9C.hwp) <br><br>
 2. 2022 청소년/청년 아이디어 경진대회<br>
