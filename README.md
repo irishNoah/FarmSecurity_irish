@@ -53,7 +53,6 @@
 | 백엔드 | Node.Js|
 | DB | MySQL|
 | 데브옵스 | Github|
-| 협업 tool| Jira |
 
 ## :factory: 개발 과정
 :one: __Yolo v4 vs v5 선택__<br>
