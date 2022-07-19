@@ -21,19 +21,19 @@
 :heavy_check_mark: 이에 따라, 사람 이외의 피해 규모 완화 위한 무인 시스템 필요성을 느껴 해당 프로젝트 개발<br>
 
 ## :sweat_drops: 개발 설계
-:one: 객체 탐지를 위해 AI 활용<br>
+:one: __객체 탐지를 위해 AI 활용__<br>
 :heavy_check_mark: 객체는 [사람/동물/새/사물]로 구분<br>
 :heavy_check_mark: 객체 중 새 및 동물은 퇴치 대상에 해당 <br><br>
 
-:two: 2단계 카메라 모드를 활용한 객체 촬영, 인식 및 구분<br>
+:two: __카메라 모드를 활용한 객체 촬영, 인식 및 구분__<br>
 :heavy_check_mark: 주간에는 일반 카메라 모드, 야간에는 적외선 카메라 모드로 구분하여 객체 촬영, 인식 및 구분<br><br>
 
-:three: 농경지와 퇴치 대상 사이 거리에 따른 퇴치 동작 다양화<br>
+:three: __농경지와 퇴치 대상 사이 거리에 따른 퇴치 동작 다양화__<br>
 :heavy_check_mark: 농경지 밖 0-5m 내에 있을 경우 : 퇴치 신호 활용하여 퇴치 진행<br>
 :heavy_check_mark: 농경지 내 지면에 있을 경우 : 1-4단계 순서대로 퇴치 진행<br>
-> :rotating_light: 1단계 : 고강도 조명 출력<br> :sound: 2단계 : 랜덤 퇴치 신호 출력<br> :zap: 3단계 : 고주파수 출력<br> :smiling_imp: 4단계 : 1~3단계 종합 출력<br>
+> :rotating_light: __1단계 : 고강도 조명 출력<br> :sound: 2단계 : 랜덤 퇴치 신호 출력<br> :zap: 3단계 : 고주파수 출력<br> :smiling_imp: 4단계 : 1~3단계 종합 출력__<br>
 <br>
-:four: 애플리케이션을 통한 퇴치 알림 서비스<br>
+:four: __애플리케이션을 통한 퇴치 알림 서비스__<br>
 :heavy_check_mark: 퇴치 대상 식별 및 퇴치 단계, 퇴치 여부를 농장 주인에게 알림<br> 
 
 ## :chart_with_upwards_trend: 순서도
@@ -55,7 +55,7 @@
 | 협업 tool| Jira |
 
 ## :factory: 개발 과정
-:one: Yolo v4 vs v5 선택<br>
+:one: __Yolo v4 vs v5 선택__<br>
 <div align="center">
   <img src="https://user-images.githubusercontent.com/80700537/179221837-d6928d6d-3a25-4477-b081-6f0d94b96021.JPG" alt="img3"/>
 </div><br>
@@ -65,37 +65,37 @@
 :heavy_check_mark: 이러한 점과 연구 목적에 맞는 v4가 좀 더 합당하다고 판단하여 v4로 최종적으로 선택하였음<br>
 
 <br>
-:two: yolov4의 Darknet으로 공부 <br>
+:two: __yolov4의 Darknet으로 공부__ <br>
 
 :heavy_check_mark: [velog 블로그](https://velog.io/@irish/Yolov4%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EA%B0%9D%EC%B2%B4-%ED%83%90%EC%A7%80-%EA%B5%AC%ED%98%84) <br>
 :heavy_check_mark: [정리 ipynb 파일 보기](https://github.com/whdms2008/FarmSecurity/blob/main/Team_AI/All/FarmSecurity_ipynb/220718/farmSecurity.ipynb) <br>
 
-:three: 비교(IOU / Avg Loss / Accuracy / Iteratoin 캡처 등)<br>
+:three: __비교(IOU / Avg Loss / Accuracy / Iteratoin 캡처 등)__ <br>
 --- 작성 해야 함 ---
 <br><br>
 
-:four: 에러 및 처리<br>
+:four: __에러 및 처리__ <br>
 --- 작성 해야 함 ---
 <br><br>
 
-:five: 기타<br>
+:five: __기타__ <br>
 --- 작성 해야 함 ---
 <br><br>
 
 ## :rocket: 성과 및 기대 효과
-:one: 농작물 재배 편의성 측면<br>
+:one: __농작물 재배 편의성 측면__ <br>
 :heavy_check_mark: 농경지 면적이 많은 전남, 경북 등의 농업 종사자에게 무인 시스템을 제공함으로써 농작물 피해 규모 완화<br><br>
 
-:two: 지역 경제 활성화 측면<br> 
+:two: __지역 경제 활성화 측면__ <br> 
 :heavy_check_mark: 질 좋은 농작물 재배 및 수출을 통해 지역 경제 활성화<br>
 :heavy_check_mark: 양질의 농작물 재배를 통한 해외 농작물 수입 억제<br>
 
 ## :checkered_flag: 참여 대회
-:one: 2022 KOAT 아이디어 경진대회<br>
+:one: __2022 KOAT 아이디어 경진대회__ <br>
 > :running: [제출 파일 다운로드하러 가기](https://github.com/irishNoah/FarmSecurity_irish/blob/main/contest_exhibit/2022_KOAT/%EB%B0%95%EC%B0%BD%EC%98%81_2022_KOAT%ED%98%81%EC%8B%A0%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4%EA%B3%B5%EB%AA%A8%EC%A0%84_AI%EB%A5%BC%EC%9D%B4%EC%9A%A9%ED%95%9C%EB%86%8D%EC%9E%91%EB%AC%BC%ED%94%BC%ED%95%B4%EC%99%84%ED%99%94%EC%8B%9C%EC%8A%A4%ED%85%9C.hwp)
 <br>
 
-:two: 2022 청소년/청년 아이디어 경진대회<br>
+:two: __2022 청소년/청년 아이디어 경진대회__ <br>
 > :running: [제출 파일 다운로드하러 가기](https://github.com/irishNoah/FarmSecurity_irish/blob/main/contest_exhibit/2022_%EC%B2%AD%EC%86%8C%EB%85%84%26%EC%B2%AD%EB%85%84/FarmSecurity(%EB%B0%95%EC%B0%BD%EC%98%81)_2022_%EC%B2%AD%EC%86%8C%EB%85%84%EC%B2%AD%EB%85%84_%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4_%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C.hwp)
 <br>
 
