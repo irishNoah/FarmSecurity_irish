@@ -70,15 +70,71 @@
 :heavy_check_mark: [객체 탐지 과정 설명 블로그](https://velog.io/@irish/Yolov4%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EA%B0%9D%EC%B2%B4-%ED%83%90%EC%A7%80-%EA%B5%AC%ED%98%84) <br>
 :heavy_check_mark: [정리 ipynb 파일 보기](https://github.com/whdms2008/FarmSecurity/blob/main/Team_AI/All/FarmSecurity_ipynb/220718/farmSecurity.ipynb) <br>
 
-:three: __비교(IOU / Avg Loss / Accuracy / Iteratoin 캡처 등)__ <br>
+:three: __비교__ <br>
+- 학습을 진행할 때마다 weights 파일 생성. Iteration을 중점으로 1000단위마다 파일 생성
+  - 예) yolov4-1000.weights / yolov4-3000.weights 등
+- 이 weights 파일을 통해 Avg Loss, mAP, IoU 등을 알 수 있음
+- 보통 6000 Itertaion으로 많이 채택하여 사용
+
+1) 이미지 수 기준으로 비교(총 150장 vs 총 750장)
+- 새 / 동물 / 사람 별 각 50장 씩 추출한 총 150장과, 각 150장 씩 추출한 총 750장 간 학습 및 실험에서 Iteration에 따른 Avg Loss 및 IoU 측정 
+
+#1 Avg Loss, IoU 측면
+
+1. 150장
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/80700537/180736911-2fbc9124-587a-479b-b452-22a9e43c27c0.png" alt="50_dataset_6000_train_chart" width="500" height="500"/>
+</div>
+
+- 위 표에서 파란색 선은 Avg Loss, 빨간색 선은 IoU를 지칭
+- 150장에서 Avg Loss는 Iteration이 커질수록 감소, IoU는 Itration이 커질수록 증가
+
+2. 750장
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/80700537/180737017-ea6835b5-eedc-4803-8f47-a45de30a0895.png" alt="250_dataset_6000_train_chart" width="500" height="500"/>
+</div>
+
+- 각 선이 의미하는 바는 150장의 표와 동일
+- 150장과 동일하게 750장에서도 Avg Loss는 Iteration이 커질수록 감소, IoU는 Itration이 커질수록 증가
+
+3. 공통점
+- 이미지 수와 상관없이 Iteration이 증가할수록, 대부분 Avg Loss는 감소 / IoU는 증가한다는 점을 알 수 있음
+
+#2 mAP 측면
+- 150장, 750장 훈련에서 발생한 각 6000.weights 파일 기준으로 test하여 mAP 측정 진행
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/80700537/180740427-84b54fec-7707-448b-a892-021542efb56e.JPG" alt="250vs750_mAP_chart" width="800" height="350"/>
+</div>
+
+- 150장의 mAP는 58.87%인 반면, 750장은 mAP가 70.97%로 약 12% 정도 차이를 보임
+- 750장이 확실히 mAP가 높은 것을 알 수 있음
+- 이를 통해 사진 수가 많을수록 mAP가 높다는 것을 알 수 있음
+
+2) Iteration별 비교(6000번 vs 9000번)
+- 동일한 이미지 수에서 Iteration이 차이날 경우 Avg Loss, IoU의 수치는 상호 간 약간의 차이가 있을 수 있으나 6000번과 9000번의 그래프 형상은 비슷한 모습이므로, Avg Loss와 IoU는 생략하였음
+
+#1 mAP 측면
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/80700537/180742261-78b76660-9b3c-4112-9ddb-2e81632df34b.JPG" alt="6000Iterationvs6000Iteration_mAP_chart" width="800" height="350"/>
+</div>
+
+- 이미지 수가 차이났을 때의 mAP는 확연한 차이가 있었으나, 이미지 수가 동일한 상황 속에서 Iteration이 3000번 정도나 차이가 남에도 불구하고 두 mAP의 차이는 1.2정도밖에 나지 않음
+- 즉, Iteration의 차이는 mAP에 큰 영향을 미치지 않는다는 것을 알 수 있음
+
+<br><br>
+
+:four: __Overfitting__ <br>
 --- 작성 해야 함 ---
 <br><br>
 
-:four: __에러 및 처리__ <br>
+
+:five: __에러 및 처리__ <br>
 --- 작성 해야 함 ---
 <br><br>
 
-:five: __기타__ <br>
+:six: __기타__ <br>
 --- 작성 해야 함 ---
 <br><br>
 
