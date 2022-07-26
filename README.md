@@ -55,7 +55,7 @@
 | 데브옵스 | Github|
 
 ## :factory: 개발 과정
-:one: __Yolo v4 vs v5 선택__<br>
+### :one: __Yolo v4 vs v5 선택__<br>
 <div align="center">
   <img src="https://user-images.githubusercontent.com/80700537/179221837-d6928d6d-3a25-4477-b081-6f0d94b96021.JPG" alt="img3"/>
 </div><br>
@@ -64,23 +64,21 @@
 :heavy_check_mark: v5로 선택할 시 좀 더 정확한 인식률 등을 기대할 수 있으나, 이것은 모델 성능 향상에 따른 인식률 등의 개선이지, 연구자 등의 노력으로 인한 개선이 아님<br>
 :heavy_check_mark: 이러한 점과 연구 목적에 맞는 v4가 좀 더 합당하다고 판단하여 v4로 최종적으로 선택하였음<br>
 
-<br>
-
-:two: __yolov4의 Darknet을 활용한 객체 탐지__  <br>
+### :two: __yolov4의 Darknet을 활용한 객체 탐지__  <br>
 :heavy_check_mark: [객체 탐지 과정 설명 블로그](https://velog.io/@irish/Yolov4%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EA%B0%9D%EC%B2%B4-%ED%83%90%EC%A7%80-%EA%B5%AC%ED%98%84) <br>
 :heavy_check_mark: [정리 ipynb 파일 보기](https://github.com/whdms2008/FarmSecurity/blob/main/Team_AI/All/FarmSecurity_ipynb/220718/farmSecurity.ipynb) <br>
 
-:three: __비교__ <br>
+### :three: __비교__ <br>
 :heavy_check_mark: 학습을 진행할 때마다 weights 파일 생성. Iteration을 중점으로 1000단위마다 파일 생성<br>
 - 예) yolov4-1000.weights / yolov4-3000.weights 등<br>
 
 :heavy_check_mark: 이 weights 파일을 통해 Avg Loss, mAP, IoU 등을 알 수 있음<br>
-:heavy_check_mark: 보통 6000 Itertaion으로 많이 채택하여 사용<br><br>
+:heavy_check_mark: 보통 6000 Itertaion으로 많이 채택하여 사용<br>
 
-__1) 이미지 수 기준으로 비교(총 150장 vs 총 750장)__ <br><br>
-:heavy_check_mark: 새 / 동물 / 사람 별 각 50장 씩 추출한 총 150장과, 각 150장 씩 추출한 총 750장 간 학습 및 실험에서 Iteration에 따른 Avg Loss 및 IoU 측정 <br><br><br>
+__1) 이미지 수 기준(150장 vs 750장)__ <br>
+:heavy_check_mark: 새 / 동물 / 사람 별 각 50장 씩 추출한 총 150장과, 각 150장 씩 추출한 총 750장 간 학습 및 실험에서 Iteration에 따른 Avg Loss 및 IoU 측정 <br><br>
 
-__#1 Avg Loss, IoU 측면__
+__#1 Avg Loss, IoU 측면__ <br>
 
 __1. 150장__
 <div align="center">
@@ -126,16 +124,15 @@ __2) Iteration 기준(6000번 vs 9000번)__ <br>
 
 <br><br>
 
-:four: __Overfitting__ <br>
+### :four: __Overfitting__ <br>
 --- 작성 해야 함 ---
 <br><br>
 
-
-:five: __에러 및 처리__ <br>
+### :five: __에러 및 처리__ <br>
 --- 작성 해야 함 ---
 <br><br>
 
-:six: __기타__ <br>
+### :six: __기타__ <br>
 --- 작성 해야 함 ---
 <br><br>
 
