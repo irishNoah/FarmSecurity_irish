@@ -122,17 +122,43 @@ __2) Iteration 기준(6000번 vs 9000번)__ <br>
 :stars: 이미지 수가 차이났을 때의 mAP는 확연한 차이가 있었으나, 이미지 수가 동일한 상황 속에서 Iteration이 3000번 정도나 차이가 남에도 불구하고 두 mAP의 차이는 1.2정도밖에 나지 않음<br>
 :stars: 즉, Iteration의 차이는 mAP에 큰 영향을 미치지 않는다는 것을 알 수 있음<br>
 
-<br><br>
+<br>
 
-### :four: __Overfitting__ <br>
+### :four: 날씨 및 빛 세기에 따른 이미지 생성 & Test <br>
+:heavy_check_mark: 날씨(눈/비), 빛 세기(일출&일몰/밤)가 객체 인식에 영향을 줄 수 있음 <br>
+:heavy_check_mark: 이에 따라, 각 종류별 250장을 눈/비/일출&일몰/밤 필터 총 4개와 합성하여 1000장의 이미지를 생성 <br>
+
+__1. 이미지 생성__  <br>
+:stars: 각 필터와, 동일한 동물 이미지에 대한 결과는 아래 순서와 같음  <br>
+:stars: 결과 이미지는 흑백 처리까지 한 결과임  <br>
+
+__#1 이미지 필터__  <br>
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/80700537/180904419-008b90d7-005c-4c4c-b597-04960853f0f6.JPG" alt="img-filters" width="500" height="300"/></div>
+
+__#2 결과 이미지__  <br>
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/80700537/180904530-f19a422f-12e5-4581-a4ab-17bd652ea076.JPG" alt="img-filters-results" width="500" height="300"/></div> <br><br>
+  
+__2. 이미지 Test__ <br>
+#참고 자료 <br>
+1. [전·후처리를 이용한 딥러닝 기반의 주차여부인식](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002519323) <br>
+2. [파이썬 코드를 이용한 파이카메라 제어](https://neosarchizo.gitbooks.io/raspberrypiforsejonguniv/content/chapter4.html) <br>
+
+--- 추가 작성 해야 함 --- <br>
+<br><br> 
+
+### 5️⃣ __Overfitting__ <br>
+--- 작성 해야 함 ---
+<br><br> 
+
+### 6️⃣ __에러 및 처리__ <br>
 --- 작성 해야 함 ---
 <br><br>
 
-### :five: __에러 및 처리__ <br>
---- 작성 해야 함 ---
-<br><br>
-
-### :six: __기타__ <br>
+### 7️⃣ __기타__ <br>
 --- 작성 해야 함 ---
 <br><br>
 
