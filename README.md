@@ -54,7 +54,7 @@
 | DB | MySQL|
 | 데브옵스 | Github|
 
-## :factory: Training
+## :factory: Yolo 설정
 ### :one: __Yolo v4 vs v5 선택__<br>
 <div align="center">
   <img src="https://user-images.githubusercontent.com/80700537/179221837-d6928d6d-3a25-4477-b081-6f0d94b96021.JPG" alt="img3"/>
@@ -68,7 +68,8 @@
 :heavy_check_mark: [객체 탐지 과정 설명 블로그](https://velog.io/@irish/Yolov4%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EA%B0%9D%EC%B2%B4-%ED%83%90%EC%A7%80-%EA%B5%AC%ED%98%84) <br>
 :heavy_check_mark: [정리 ipynb 파일 보기](https://github.com/whdms2008/FarmSecurity/blob/main/Team_AI/All/FarmSecurity_ipynb/220718/farmSecurity.ipynb) <br>
 
-### :three: __비교__ <br>
+# :factory: 학습
+## :one: __학습 Dataset 개수 차이에 따른 비교__ <br>
 :heavy_check_mark: 학습을 진행할 때마다 weights 파일 생성. Iteration을 중점으로 1000단위마다 파일 생성<br>
 - 예) yolov4-1000.weights / yolov4-3000.weights 등<br>
 
@@ -123,6 +124,15 @@ __2) Iteration 기준(6000번 vs 9000번)__ <br>
 :stars: 즉, Iteration의 차이는 mAP에 큰 영향을 미치지 않는다는 것을 알 수 있음<br>
 
 <br>
+
+## :two: 기법을 적용한 정확성 개선 확인 <br>
+✔️ 1️⃣에서 확인할 수 있듯이 이미지 수를 늘릴수록, mAP 등 정확도가 높아진다는 것을 알 수 있음 <br>
+✔️ 이미지 수만 늘려서 정확도를 높이기보다, 특정 기법을 적용해서 정확도를 높이기 위한 방식을 찾아보았음 <br>
+✔️ sharpning 기법, 차영상 기법, sobel 기법을 적용하여 test를 진행하였음
+
+### sharpning 기법
+
+
 
 ### :four: 날씨 및 빛 세기에 따른 이미지 생성 & Test <br>
 :heavy_check_mark: 날씨(눈/비), 빛 세기(일출&일몰/밤)가 객체 인식에 영향을 줄 수 있음 <br>
