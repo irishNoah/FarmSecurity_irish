@@ -54,8 +54,8 @@
 | DB | MySQL|
 | 데브옵스 | Github|
 
-## :factory: Yolo 설정
-### :one: __Yolo v4 vs v5 선택__<br>
+## 🚥 Yolo 설정
+### 🎏 __Yolo v4 vs v5 선택__<br>
 <div align="center">
   <img src="https://user-images.githubusercontent.com/80700537/179221837-d6928d6d-3a25-4477-b081-6f0d94b96021.JPG" alt="img3"/>
 </div><br>
@@ -130,7 +130,7 @@ __2) Iteration 기준(6000번 vs 9000번)__ <br>
 ✔️ 이미지 수만 늘려서 정확도를 높이기보다, 특정 기법을 적용해서 정확도를 높이기 위한 방식을 찾아보았음 <br>
 ✔️ sharpning 기법, 차영상 기법, sobel 기법을 적용하여 test를 진행하였음 <br>
 
-### sharpning 기법 <br>
+### 🔪 sharpning 기법 <br>
 ✔️ ["sharpning"이란](https://marisara.tistory.com/entry/%ED%8C%8C%EC%9D%B4%EC%8D%AC-openCV-13-%EB%B8%94%EB%9F%AC%EB%A7%81blurring%EC%8A%A4%EB%AC%B4%EB%94%A9smoothing%EC%83%A4%ED%94%84%EB%8B%9Dsharpening)  <br>
 ✔️ sharpning 기법을 적용한 결과는 아래와 같음 <br>
 
@@ -141,7 +141,7 @@ __2) Iteration 기준(6000번 vs 9000번)__ <br>
 ✔️ 750장 test시 사용했던 동일한 Dataset에 sharpning 기법을 적용 후 train하였고, 이 중 6000.weights 파일 기준으로 test하여 mAP 측정 진행한 것임<br>
 ✔️ 아무 기법 적용하지 않은 750장 mAP 결과보다, sharpning 기법을 적용한 mAP가 약 10% 정도 낮은 것을 확인할 수 있음<br>
 
-### 차영상 기법 <br>
+### 📹 차영상 기법 <br>
 ✔️ ["차영상"이란](https://www.geeksforgeeks.org/python-background-subtraction-using-opencv/) <br>
 
 #### 차영상 결과
@@ -150,7 +150,7 @@ __2) Iteration 기준(6000번 vs 9000번)__ <br>
 </div> <br>
 
 ✔️ 왼쪽 사진에서 빨간 사각형이 있는 부분이 탐지된 객체임 <br>
-✔️ 오른쪽 사진이 탐지된 객체 부분이 흰색으로, 그 나머지 부분이 다 검정색으로 변화됨
+✔️ 오른쪽 사진에 보이는 흰색 부분이 탐지된 객체 부분에 해당되며, 검정색 부분은 그 외의 부분에 해당됨
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/80700537/185859155-da9c55c5-f216-4ab8-88c5-302308e351fb.JPG" width="700" height="300"/>
@@ -160,7 +160,7 @@ __2) Iteration 기준(6000번 vs 9000번)__ <br>
 ✔️ 예상 문제로는 이미지가 작아서 주변 잡음에 쉽게 영향을 받기 때문인 것으로 추측됨. 확대하니 인식이 잘 되긴 하지만, 객체 인식 때마다 이렇게 하는 것은 매우 비효율적인 방식에 해당됨.<br>
 ✔️ 이에 따라 차영상에 관한 mAP는 따로 생성하지 않았음<br>
 
-### sobel 기법 <br>
+### 🔮 sobel 기법 <br>
 ✔️ ["sobel"이란](https://deep-learning-study.tistory.com/205)  <br>
 ✔️ sobel 기법을 적용한 결과는 아래와 같음 <br>
 
@@ -202,7 +202,7 @@ __2. 이미지 Test__ <br>
 - Yolo에서 동물 또는 새를 인식하면, 이에 대한 정보(예 : 객체 탐지 시간 / 탐지 객체 캡처 사진) 등을 최종적으로 클라이언트에 보여주기 위해 이 값들을 서버에 보내주어야 한다. 객체 탐지 시간 등에 대한 정보는 단순 text이기 때문에 이를 처리하는 과정은 단순하다. 하지만, 캡처된 이미지 자체를 보내주는 것은 어렵다. 이를 해결하기 위해서는 캡처 이미지를 공개 URL 등을 통해 다른 곳에서도 쉽게 접근해야 할 것이다. 이에 대한 과정을 ~~~ 
 
 
-### 5️⃣ __사용자에게 객체 인식 이미지 보여주기__ <br>
+### 4️⃣ __사용자에게 객체 인식 이미지 보여주기__ <br>
 
 <br><br> 
 
