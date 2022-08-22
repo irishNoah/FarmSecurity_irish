@@ -130,7 +130,17 @@ __2) Iteration 기준(6000번 vs 9000번)__ <br>
 ✔️ 이미지 수만 늘려서 정확도를 높이기보다, 특정 기법을 적용해서 정확도를 높이기 위한 방식을 찾아보았음 <br>
 ✔️ sharpning 기법, 차영상 기법, sobel 기법을 적용하여 test를 진행하였음
 
-### sharpning 기법
+### sharpning 기법 <br>
+✔️ [sharpning 이란](https://marisara.tistory.com/entry/%ED%8C%8C%EC%9D%B4%EC%8D%AC-openCV-13-%EB%B8%94%EB%9F%AC%EB%A7%81blurring%EC%8A%A4%EB%AC%B4%EB%94%A9smoothing%EC%83%A4%ED%94%84%EB%8B%9Dsharpening)  <br>
+✔️ sharpning 기법을 적용한 결과는 아래와 같음 <br>
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/80700537/185849277-7f990217-69c1-4b6e-a371-376ca7889cd7.JPG" width="300" height="300"/>
+</div> <br>
+
+✔️ 750장 test시 사용했던 동일한 Dataset을 sharpning 기법을 적용후 test하였고, 이 중 6000.weights 파일 기준으로 test하여 mAP 측정 진행한 것임<br>
+✔️ 아무 기법 적용하지 않은 750장 mAP 결과보다, sharpning 기법을 적용한 mAP가 약 10% 정도 낮은 것을 확인할 수 있음
+
 
 
 
