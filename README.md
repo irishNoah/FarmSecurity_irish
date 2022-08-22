@@ -131,20 +131,48 @@ __2) Iteration 기준(6000번 vs 9000번)__ <br>
 ✔️ sharpning 기법, 차영상 기법, sobel 기법을 적용하여 test를 진행하였음 <br>
 
 ### sharpning 기법 <br>
-✔️ [sharpning 이란](https://marisara.tistory.com/entry/%ED%8C%8C%EC%9D%B4%EC%8D%AC-openCV-13-%EB%B8%94%EB%9F%AC%EB%A7%81blurring%EC%8A%A4%EB%AC%B4%EB%94%A9smoothing%EC%83%A4%ED%94%84%EB%8B%9Dsharpening)  <br>
+✔️ ["sharpning"이란](https://marisara.tistory.com/entry/%ED%8C%8C%EC%9D%B4%EC%8D%AC-openCV-13-%EB%B8%94%EB%9F%AC%EB%A7%81blurring%EC%8A%A4%EB%AC%B4%EB%94%A9smoothing%EC%83%A4%ED%94%84%EB%8B%9Dsharpening)  <br>
 ✔️ sharpning 기법을 적용한 결과는 아래와 같음 <br>
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/80700537/185849277-7f990217-69c1-4b6e-a371-376ca7889cd7.JPG" width="300" height="300"/>
 </div> <br>
 
-✔️ 750장 test시 사용했던 동일한 Dataset을 sharpning 기법을 적용후 test하였고, 이 중 6000.weights 파일 기준으로 test하여 mAP 측정 진행한 것임<br>
-✔️ 아무 기법 적용하지 않은 750장 mAP 결과보다, sharpning 기법을 적용한 mAP가 약 10% 정도 낮은 것을 확인할 수 있음
+✔️ 750장 test시 사용했던 동일한 Dataset에 sharpning 기법을 적용 후 train하였고, 이 중 6000.weights 파일 기준으로 test하여 mAP 측정 진행한 것임<br>
+✔️ 아무 기법 적용하지 않은 750장 mAP 결과보다, sharpning 기법을 적용한 mAP가 약 10% 정도 낮은 것을 확인할 수 있음<br>
+
+### 차영상 기법 <br>
+✔️ ["차영상"이란](https://www.geeksforgeeks.org/python-background-subtraction-using-opencv/) <br>
+
+#### 차영상 결과
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/80700537/185859034-ec9be1ba-6703-49f4-b088-1681bd10b9e3.JPG" width="700" height="300"/>
+</div> <br>
+
+✔️ 왼쪽 사진에서 빨간 사각형이 있는 부분이 탐지된 객체임 <br>
+✔️ 오른쪽 사진이 탐지된 객체 부분이 흰색으로, 그 나머지 부분이 다 검정색으로 변화됨
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/80700537/185859155-da9c55c5-f216-4ab8-88c5-302308e351fb.JPG" width="700" height="300"/>
+</div> <br>
+
+✔️ 왼쪽 사진에 있는 흰색 부분에 원본과 겹치는 부분이 들어가게 됨. 하지만 여기서는 객체가 탐지되지 않는 것을 확인할 수 있음<br>
+✔️ 예상 문제로는 이미지가 작아서 주변 잡음에 쉽게 영향을 받기 때문인 것으로 추측됨. 확대하니 인식이 잘 되긴 하지만, 객체 인식 때마다 이렇게 하는 것은 매우 비효율적인 방식에 해당됨.<br>
+✔️ 이에 따라 차영상에 관한 mAP는 따로 생성하지 않았음<br>
+
+### sobel 기법 <br>
+✔️ ["sobel"이란](https://deep-learning-study.tistory.com/205)  <br>
+✔️ sobel 기법을 적용한 결과는 아래와 같음 <br>
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/80700537/185861525-a0d738c5-ba70-4a03-83f5-ec7c2712da0d.png" width="300" height="300"/>
+</div> <br>
+
+✔️ 750장 test시 사용했던 동일한 Dataset에 sobel 기법을 적용 후 train하였고, 이 중 6000.weights 파일 기준으로 test하여 mAP 측정 진행한 것임<br>
+✔️ 아무 기법 적용하지 않은 750장 mAP 결과보다, sobel 기법을 적용한 mAP가 약 13~14% 정도 낮은 것을 확인할 수 있음<br>
 
 
-
-
-### :four: 날씨 및 빛 세기에 따른 이미지 생성 & Test <br>
+## 3️⃣ 날씨 및 빛 세기에 따른 이미지 생성 & Test <br>
 :heavy_check_mark: 날씨(눈/비), 빛 세기(일출&일몰/밤)가 객체 인식에 영향을 줄 수 있음 <br>
 :heavy_check_mark: 이에 따라, 각 종류별 250장을 눈/비/일출&일몰/밤 필터 총 4개와 합성하여 1000장의 이미지를 생성 <br>
 
