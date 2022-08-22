@@ -128,7 +128,7 @@ __2) Iteration 기준(6000번 vs 9000번)__ <br>
 ## :two: 기법을 적용한 정확성 개선 확인 <br>
 ✔️ 1️⃣에서 확인할 수 있듯이 이미지 수를 늘릴수록, mAP 등 정확도가 높아진다는 것을 알 수 있음 <br>
 ✔️ 이미지 수만 늘려서 정확도를 높이기보다, 특정 기법을 적용해서 정확도를 높이기 위한 방식을 찾아보았음 <br>
-✔️ sharpning 기법, 차영상 기법, sobel 기법을 적용하여 test를 진행하였음
+✔️ sharpning 기법, 차영상 기법, sobel 기법을 적용하여 test를 진행하였음 <br>
 
 ### sharpning 기법 <br>
 ✔️ [sharpning 이란](https://marisara.tistory.com/entry/%ED%8C%8C%EC%9D%B4%EC%8D%AC-openCV-13-%EB%B8%94%EB%9F%AC%EB%A7%81blurring%EC%8A%A4%EB%AC%B4%EB%94%A9smoothing%EC%83%A4%ED%94%84%EB%8B%9Dsharpening)  <br>
