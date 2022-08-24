@@ -37,6 +37,19 @@
 :four: __애플리케이션을 통한 퇴치 알림 서비스__<br>
 :heavy_check_mark: 퇴치 대상 식별 및 퇴치 단계, 퇴치 여부를 농장 주인에게 알림<br> 
 
+## 🐟 H/W & S/W 구성도<br>
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/80700537/186291096-df9253c7-dadf-42e8-898d-3786f0734994.JPG" width="800" height="500"/>
+</div><br>
+
+✔️ 라즈베리(카메라)는 실시간으로 영상 촬영 및 AI 모듈에 영상 제공<br>
+✔️ AI 모듈은 실시간으로 객체 탐지 실행. 만약 탐지 객체가 동물 또는 새일 경우 퇴치 단계에 따라 라즈베리(빛) 또는 라즈베리(스피커) 제어<br>
+✔️ 라즈베리(빛) 또는 라즈베리(스피커)는 AI 모듈의 제어 신호에 따라 작동됨<br>
+✔️ AI 모듈은 동물 또는 새 탐지 시 [카메라 일련번호 / 탐지 객체 캡처 링크 / 퇴치 단계 / 탐지 시간] 정보를 서버(=Spring Boot)에 송신<br>
+✔️ 서버는 실시간으로 AI 모듈에서 보내는 정보를 감지. 감지된 정보가 있을 경우 해당 정보를 DB 삽입. 또한 이 정보를 사용자에게 알림{-> 탐지 객체 있을 경우 사용자가 알아야 하므로}<br>
+✔️ 사용자가 과거 기록 확인 요청할 경우 해당 요청 정보 확인 가능<br>
+
 ## :chart_with_upwards_trend: 순서도
 <div align="center">
   <img src="https://user-images.githubusercontent.com/80700537/179218577-c5aa5d2d-a47b-4818-831c-6e1da456e6f2.JPG" alt="img2"/>
