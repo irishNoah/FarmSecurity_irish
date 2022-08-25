@@ -222,26 +222,26 @@ __2) Iteration 기준(6000번 vs 9000번)__ <br>
 - 이전 전처리 방식에서의 mAP는 약 71%였던 것에 비해, 이번 전처리 방식에서의 mAP는 약 77%로 6% 가량 오른 것을 확인할 수 있음<br>
 - 이를 통해, 명확한 전처리 방식이 학습 효과 향상에 기여한다는 것을 확인할 수 있음<br>
 
-### Number of objects per class (클래스별 탐지 객체 수)
+### 🎰 Number of objects per class (클래스별 탐지 객체 수)
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/80700537/186587636-5cbdfe8e-6471-45ae-b3c5-a16e4e423438.png" width="450" height="350"/>
 </div> <br>
 
-- True Positive(이하 TP) : 예측을 잘함
-- False Positive(이하 FP) : false 인데 positive로 판단
-- bird의 FP/TP+FP는 약 0.18을 기록
-- animal의 FP/TP+FP는 약 0.11을 기록
-- human의 FP/TP+FP는 약 0.19를 기록
-- 즉, bird와 human의 오탐율은 비교적 높고, animal의 오탐율은 비교적 낮음을 확인할 수 있음
+- True Positive(이하 TP) : 예측을 잘함<br>
+- False Positive(이하 FP) : false 인데 positive로 판단<br>
+- bird의 FP/TP+FP는 약 0.18을 기록<br>
+- animal의 FP/TP+FP는 약 0.11을 기록<br>
+- human의 FP/TP+FP는 약 0.19를 기록<br>
+- 즉, bird와 human의 오탐율은 비교적 높고, animal의 오탐율은 비교적 낮음을 확인할 수 있음<br>
 
-## 3️⃣ Yolo의 한계점 <br>
+## 4️⃣ Yolo의 한계점 <br>
+✔️ [Yolo의 한계 관련 참고 링크](https://deepbaksuvision.github.io/Modu_ObjectDetection/posts/04_01_Review_of_YOLO_Paper.html) <br>
+✔️ 주로 농경지에 animal과 human이 때를 지어 다니는 경우는 없으나, bird는 때를 지어 다니는 경우가 빈번함 <br>
+✔️ 이에 따라, 한 이미지 속에 bird가 많은 것으로 test를 진행할 경우, 일부는 새로 인식하나, 새로 인식하지 못한 개체들도 많았음<br>
+✔️ YOLO 문제점은 각 그리드 셀마다 오직 하나의 객체만을 검출할 수 있다는 것임. 이는 객체 검출에서 아주 강한 공간적 제약(spatial constraints)에 해당됨. 이러한 공간적 제약으로 인해 YOLO는 '새 떼'와 같이 작은 객체들이 무리 지어 있는 경우의 객체 검출이 제한적일 수 있음<br>
 
-
-
-
-
-## 3️⃣ 날씨 및 빛 세기에 따른 이미지 생성 & Test <br>
+## 5️⃣ 날씨 및 빛 세기에 따른 이미지 생성 & Test <br>
 :heavy_check_mark: 날씨(눈/비), 빛 세기(일출&일몰/밤)가 객체 인식에 영향을 줄 수 있음 <br>
 :heavy_check_mark: 이에 따라, 각 종류별 250장을 눈/비/일출&일몰/밤 필터 총 4개와 합성하여 1000장의 이미지를 생성 <br>
 
