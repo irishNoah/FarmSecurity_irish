@@ -222,6 +222,24 @@ __2) Iteration 기준(6000번 vs 9000번)__ <br>
 - 이전 전처리 방식에서의 mAP는 약 71%였던 것에 비해, 이번 전처리 방식에서의 mAP는 약 77%로 6% 가량 오른 것을 확인할 수 있음<br>
 - 이를 통해, 명확한 전처리 방식이 학습 효과 향상에 기여한다는 것을 확인할 수 있음<br>
 
+### Number of objects per class (클래스별 탐지 객체 수)
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/80700537/186587636-5cbdfe8e-6471-45ae-b3c5-a16e4e423438.png" width="450" height="350"/>
+</div> <br>
+
+- True Positive(이하 TP) : 예측을 잘함
+- False Positive(이하 FP) : false 인데 positive로 판단
+- bird의 FP/TP+FP는 약 0.18을 기록
+- animal의 FP/TP+FP는 약 0.11을 기록
+- human의 FP/TP+FP는 약 0.19를 기록
+- 즉, bird와 human의 오탐율은 비교적 높고, animal의 오탐율은 비교적 낮음을 확인할 수 있음
+
+## 3️⃣ Yolo의 한계점 <br>
+
+
+
+
 
 ## 3️⃣ 날씨 및 빛 세기에 따른 이미지 생성 & Test <br>
 :heavy_check_mark: 날씨(눈/비), 빛 세기(일출&일몰/밤)가 객체 인식에 영향을 줄 수 있음 <br>
