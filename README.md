@@ -197,20 +197,30 @@ __2) Iteration 기준(6000번 vs 9000번)__ <br>
 - 이에 따라 cfg에서 resize를 진행하기 보다, 애초에 모든 이미지 size를 416*416으로 조정<br>
 - 이후 이 사이즈 규격을 기반으로 객체 좌표값 산출<br>
 
-🌠 해상도 높이기(bilateralFilter)<br>
+🌠 __해상도 높이기(bilateralFilter)__ <br>
 - [이미지 속 객체 해상도 높이기 참고 링크](https://deep-learning-study.tistory.com/164) <br>
 - 해상도를 높이면 학습 효과가 더 올라가는 경우가 존재함에 따라 해상도를 높임<br>
 
-🌠 cfg 파일도 재설정<br>
+🌠 __cfg 파일도 재설정__ <br>
 - cfg 파일 점검 재진행<br>
 
-🌠 animal, bird, human 클래스 데이터별로 train, test, valid 크기 맞추기<br>
+🌠 __animal, bird, human 클래스 데이터별로 train, test, valid 크기 맞추기__ <br>
 - 예전 학습 때에는 한 Dataset 파일에 animal, bird, human 클래스 데이터를 넣고 train, test, valid를 임의로 6:2:2 비율로 나누었음<br>
 - 이럴 경우, 각 클래스 데이터별로 6:2:2로 나누어지는 것이 아니기 때문에, 특정 클래스 데이터가 더 많은 학습 데이터에 사용될 수도 안될수도 있음<br>
 - 이에 따라, 클래스 데이터별로 폴더로 나누어 train, test, valid를 6:2:2 비율로 정확히 나누었음<br>
 - 이로 인해 모든 클래스 데이터가 공평한 이미지 수로 학습에 참여할 수 있게 되었음<br>
 
-🌠 yolov4 정확도 높이기(cfg 관련) 적용<br>
+🌠 __yolov4 정확도 높이기(cfg 관련) 적용__ <br>
+
+### 🎸 달라진 결과 확인<br>
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/80700537/186552231-3e3637c5-888a-4ba1-9bf3-f59944a1a5ba.png" width="350" height="350"/>
+</div> <br>
+
+- 학습 때 사용한 Dataset은 이전 전처리 방식의 750장 Dataset과 동일함<br>
+- 이전 전처리 방식에서의 mAP는 약 71%였던 것에 비해, 이번 전처리 방식에서의 mAP는 약 77%로 6% 가량 오른 것을 확인할 수 있음<br>
+- 이를 통해, 명확한 전처리 방식이 학습 효과 향상에 기여한다는 것을 확인할 수 있음<br>
 
 
 ## 3️⃣ 날씨 및 빛 세기에 따른 이미지 생성 & Test <br>
