@@ -81,7 +81,7 @@
 :heavy_check_mark: [객체 탐지 과정 설명 블로그](https://velog.io/@irish/Yolov4%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EA%B0%9D%EC%B2%B4-%ED%83%90%EC%A7%80-%EA%B5%AC%ED%98%84) <br>
 :heavy_check_mark: [정리 ipynb 파일 보기](https://github.com/whdms2008/FarmSecurity/blob/main/Team_AI/All/FarmSecurity_ipynb/220718/farmSecurity.ipynb) <br>
 
-# :factory: 학습
+# :factory: YOLO를 활용한 객체 인식 과정(train&test 포함)
 ## :one: __학습 Dataset 개수 차이에 따른 비교__ <br>
 :heavy_check_mark: 학습을 진행할 때마다 weights 파일 생성. Iteration을 중점으로 1000단위마다 파일 생성<br>
 - 예) yolov4-1000.weights / yolov4-3000.weights 등<br>
@@ -235,14 +235,10 @@ __2) Iteration 기준(6000번 vs 9000번)__ <br>
 - human의 FP/TP+FP는 약 0.19를 기록<br>
 - 즉, bird와 human의 오탐율은 비교적 높고, animal의 오탐율은 비교적 낮음을 확인할 수 있음<br>
 
-## 4️⃣ Yolo의 한계점 <br>
-✔️ [Yolo의 한계 관련 참고 링크](https://deepbaksuvision.github.io/Modu_ObjectDetection/posts/04_01_Review_of_YOLO_Paper.html) <br>
-✔️ 주로 농경지에 animal과 human이 때를 지어 다니는 경우는 없으나, bird는 때를 지어 다니는 경우가 빈번함 <br>
-✔️ 이에 따라, 한 이미지 속에 bird가 많은 것으로 test를 진행할 경우, 일부는 새로 인식하나, 새로 인식하지 못한 개체들도 많았음<br>
-✔️ YOLO 문제점은 각 그리드 셀마다 오직 하나의 객체만을 검출할 수 있다는 것임. 이는 객체 검출에서 아주 강한 공간적 제약(spatial constraints)에 해당됨. 이러한 공간적 제약으로 인해 YOLO는 '새 떼'와 같이 작은 객체들이 무리 지어 있는 경우의 객체 검출이 제한적일 수 있음<br>
-
-## 5️⃣ 날씨 및 빛 세기에 따른 이미지 생성 & Test <br>
-:heavy_check_mark: 날씨(눈/비), 빛 세기(일출&일몰/밤)가 객체 인식에 영향을 줄 수 있음 <br>
+## 4️⃣ 날씨 및 환경에 따른 학습 및 실험 영향 확인 <br>
+:heavy_check_mark: 이전까지는 날씨 및 환경이 좋은 사진들로만 학습 및 실험을 진행하였음 <br>
+:heavy_check_mark: 하지만 날씨 및 환경이 상대적으로 좋지 않을 경우(예 : 눈/비/일출/일몰), 이러한 것이 객체 인식에 영향을 줄 수 있음 <br>
+:heavy_check_mark: 이에 따라, 본 연구팀은 날씨 및 환경이 좋았던 상황에서 77% mAP를 기록하기 위해 750장의 dataset이 필요한 것처럼, 날씨 및 환경이 좋지 않을 경우 약 77%를 기록하기 위해, 얼마나 많은 dataset이 필요한지 확인해보기로 하였음
 :heavy_check_mark: 이에 따라, 각 종류별 250장을 눈/비/일출&일몰/밤 필터 총 4개와 합성하여 1000장의 이미지를 생성 <br>
 
 __1. 이미지 생성__  <br>
