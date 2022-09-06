@@ -75,7 +75,6 @@ __#3 구성도 설명__ <br>
 | Front End | Android Studio |
 | Back End | Spring Boot |
 | DB | Maria DB |
-| Al | Firebase |
 | Notification | Firebase |
 | Hardware | Raspberry Pi |
 | Devops | Github |
