@@ -53,8 +53,13 @@ __#3 구성도 설명__ <br>
 ✔️ AI 모듈은 실시간으로 객체 탐지 실행. 만약 탐지 객체가 동물 또는 새일 경우 퇴치 단계에 따라 라즈베리(빛) 또는 라즈베리(스피커) 제어<br>
 ✔️ 라즈베리(빛) 또는 라즈베리(스피커)는 AI 모듈의 제어 신호에 따라 작동됨<br>
 ✔️ AI 모듈은 동물 또는 새 탐지 시 [카메라 일련번호 / 탐지 객체 캡처 링크 / 퇴치 단계 / 탐지 시간] 정보를 서버(=Spring Boot)에 송신<br>
-✔️ 서버는 실시간으로 AI 모듈에서 보내는 정보를 감지. 감지된 정보가 있을 경우 해당 정보를 DB 삽입. 또한 이 정보를 사용자에게 알림{-> 탐지 객체 있을 경우 사용자가 알아야 하므로}<br>
+✔️ 서버는 실시간으로 AI 모듈에서 보내는 정보를 감지. 감지된 정보가 있을 경우 해당 정보를 DB 삽입. 또한 이 정보를 사용자에게 파이어베이스 알림을 통해 {-> 탐지 객체 있을 경우 사용자가 알아야 하므로}<br>
 ✔️ 사용자가 과거 기록 확인 요청할 경우 해당 요청 정보 확인 가능<br>
+
+## 👬 ERD <br>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/80700537/188640237-c1407dee-c22d-4075-9293-b1dc26ec1a10.JPG" alt="ERD" width="600" height="450"/>
+</div> <br>
 
 ## :chart_with_upwards_trend: 순서도
 <div align="center">
@@ -65,13 +70,16 @@ __#3 구성도 설명__ <br>
 
 | 구분 | 사용 Tool / 사이트 / 프레임워크 |     
 | :------: | :-----------------------------------------------:|
-| 언어 | Python |
-| 데이터 수집 | Python / Kaggle 등 |
-| 데이터 train & test | Goolge Colab Pro & Yolov4 |
-| 프론트엔드 | Raact.Js & Android Studio |
-| 백엔드 | Node.Js|
-| DB | MySQL|
-| 데브옵스 | Github|
+| Data collection | AI Hub / Kaggle |
+| Date train & test | Goolge Colab Pro & Yolov4 |
+| Front End | Android Studio |
+| Back End | Spring Boot |
+| DB | Maria DB |
+| Al | Firebase |
+| Notification | Firebase |
+| Hardware | Raspberry Pi |
+| Devops | Github |
+| Etc | GCP, GCM, FCM |
 
 ## 🚥 Yolo 설정
 ### 🎏 __Yolo v4 vs v5 선택__<br>
@@ -287,25 +295,18 @@ __----------- 해당 부분은 작업 진행 중 ----------__- <br><br>
 # ⚠️ 사용자에게 객체 인식 이미지 보여주기 <br>
  __!!!!!작성 필요!!!!!__ <br><br>
 
-# 📳 Front End & Back End(이하 FE&BE) To Do List
-
-## 👬 ERD <br>
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/80700537/188640237-c1407dee-c22d-4075-9293-b1dc26ec1a10.JPG" alt="ERD" width="600" height="450"/>
-</div> <br>
-
-## ⏰ 알람을 위한 Firebase 채택 이유 <br>
-✔️ 서버에서 앱으로 푸쉬 알람을 전송하는 기능을 구현하기 위해서는 파이어베이스와 브로드캐스트리시버 2종류의 선택지가 존재했음 <br>
-✔️ 해당 프로젝트는 앱이 실행 중이지 않을 때(즉, 백그라운드에서 실행되고 있을 경우)에도 알람이 필요할 경우, 클라이언트에게 알람을 전송해야 함 <br>
+# ⏰ 알림을 위한 Firebase 채택 이유 <br>
+✔️ 서버에서 앱으로 푸쉬 알림을 전송하는 기능을 구현하기 위해서는 파이어베이스와 브로드캐스트리시버 2종류의 선택지가 존재했음 <br>
+✔️ 해당 프로젝트는 앱이 실행 중이지 않을 때(즉, 백그라운드에서 실행되고 있을 경우)에도 알림이 필요할 경우, 클라이언트에게 알림을 전송해야 함 <br>
 ✔️ 이에 따라, 앱이 실행 중이거나 특수한 이벤트 발생 시에 작동되는 브로드캐스트리시버는 부적절하다고 판단 <br>
 ✔️ 따라서, 필요 조건을 충족할 수 있는 파이어베이스를 선택 <br>
 
-## ✉️ GCM(Google Cloud Messaging) 구성 <br>
+# ✉️ GCM(Google Cloud Messaging) 구성 <br>
 <div align="center">
   <img src="https://user-images.githubusercontent.com/80700537/188641475-ea68109a-baf2-4b81-b0eb-464eb2aed978.JPG" alt="GCM" width="550" height="400"/>
 </div> <br>
 
-## 📮 Firebase 클라우드 메시징(이하, FCM)의 동작 원리 <br>
+# 📮 Firebase 클라우드 메시징(이하, FCM)의 동작 원리 <br>
 <div align="center">
   <img src="https://user-images.githubusercontent.com/80700537/188641863-e223bc87-7b27-45ca-80fa-c1e56da04d02.JPG" alt="Firebase" width="550" height="400"/>
 </div> <br>
