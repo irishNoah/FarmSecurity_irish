@@ -38,11 +38,17 @@
 :heavy_check_mark: 퇴치 대상 식별 및 퇴치 단계, 퇴치 여부를 농장 주인에게 알림<br> 
 
 ## 🐟 H/W & S/W 구성도<br>
-
+__#1 단순 구성도__
 <div align="center">
   <img src="https://user-images.githubusercontent.com/80700537/186291096-df9253c7-dadf-42e8-898d-3786f0734994.JPG" width="800" height="500"/>
-</div><br>
+</div> <br><br>
 
+__#2 상세 구성도__ <br>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/80700537/188639417-deef579e-22c8-481c-afca-3c71f208b1e8.JPG" width="700" height="350"/> 
+</div><br><br>
+
+__#3 구성도 설명__ <br>
 ✔️ 라즈베리(카메라)는 실시간으로 영상 촬영 및 AI 모듈에 영상 제공<br>
 ✔️ AI 모듈은 실시간으로 객체 탐지 실행. 만약 탐지 객체가 동물 또는 새일 경우 퇴치 단계에 따라 라즈베리(빛) 또는 라즈베리(스피커) 제어<br>
 ✔️ 라즈베리(빛) 또는 라즈베리(스피커)는 AI 모듈의 제어 신호에 따라 작동됨<br>
@@ -280,6 +286,35 @@ __----------- 해당 부분은 작업 진행 중 ----------__- <br><br>
 
 # ⚠️ 사용자에게 객체 인식 이미지 보여주기 <br>
  __!!!!!작성 필요!!!!!__ <br><br>
+
+# 📳 Front End & Back End(이하 FE&BE) To Do List
+
+## 👬 ERD <br>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/80700537/188640237-c1407dee-c22d-4075-9293-b1dc26ec1a10.JPG" alt="ERD" width="600" height="450"/>
+</div> <br>
+
+## ⏰ 알람을 위한 Firebase 채택 이유 <br>
+✔️ 서버에서 앱으로 푸쉬 알람을 전송하는 기능을 구현하기 위해서는 파이어베이스와 브로드캐스트리시버 2종류의 선택지가 존재했음 <br>
+✔️ 해당 프로젝트는 앱이 실행 중이지 않을 때(즉, 백그라운드에서 실행되고 있을 경우)에도 알람이 필요할 경우, 클라이언트에게 알람을 전송해야 함 <br>
+✔️ 이에 따라, 앱이 실행 중이거나 특수한 이벤트 발생 시에 작동되는 브로드캐스트리시버는 부적절하다고 판단 <br>
+✔️ 따라서, 필요 조건을 충족할 수 있는 파이어베이스를 선택 <br>
+
+## ✉️ GCM(Google Cloud Messaging) 구성 <br>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/80700537/188641475-ea68109a-baf2-4b81-b0eb-464eb2aed978.JPG" alt="GCM" width="550" height="400"/>
+</div> <br>
+
+## 📮 Firebase 클라우드 메시징(이하, FCM)의 동작 원리 <br>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/80700537/188641863-e223bc87-7b27-45ca-80fa-c1e56da04d02.JPG" alt="Firebase" width="550" height="400"/>
+</div> <br>
+
+1. 클라이언트 앱에서 Sender ID를 이용해 등록을 요청 <br>
+2. FCM은 클라이언트 앱에서 전달받은 SenderId를 토대로 Registration Token을 클라이언트 앱에서 발급 <br>
+3. 클라이언트 앱은 FCM에서 전달받은 Registration Token을 앱 서버에 전달하고, 이를 전달받은 앱 서버는 Registration Token을 저장 <br>
+4. 앱 서버는 Registration Token, API Key, 전송할 메시지를 이용하여 GCM에 메시지를 전송 <br>
+5. FCM은 앱 서버로부터 전달받은 메시지를 해당 클라이언트 앱에 메시지를 전송 <br>
 
 # 🎹 __기타__ <br>
  __!!!!!작성 필요!!!!!__ <br><br>
