@@ -223,7 +223,7 @@ __2) Iteration 기준(6000번 vs 9000번)__ <br>
 
 🌠 __yolov4 정확도 높이기(cfg 관련) 적용__ <br>
 
-### 🎸 달라진 결과 확인<br>
+### 🎸 달라진 결과 확인(mAP)<br>
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/80700537/186552231-3e3637c5-888a-4ba1-9bf3-f59944a1a5ba.png" width="350" height="350"/>
@@ -232,6 +232,37 @@ __2) Iteration 기준(6000번 vs 9000번)__ <br>
 - 학습 때 사용한 Dataset은 이전 전처리 방식의 750장 Dataset과 동일함<br>
 - 이전 전처리 방식에서의 mAP는 약 71%였던 것에 비해, 이번 전처리 방식에서의 mAP는 약 77%로 6% 가량 오른 것을 확인할 수 있음<br>
 - 이를 통해, 명확한 전처리 방식이 학습 효과 향상에 기여한다는 것을 확인할 수 있음<br>
+
+### 🎸 달라진 결과 확인(동영상)<br>
+✔️ README.md에 동영상(GIF)를 올리려 했으나, 동영상 용량 문제로 인해, 각 영상 별 대표 이미지와 각 영상 설명란에 유튜브 링크를 첨부하였습니다.<br>
+✔️ 확실한 차이는 각 영상 별 이미지보다 유튜브에 더 잘 보이기 때문에, 유튜브 링크를 통해 차이를 꼭 비교하시길 바랍니다.<br><br>
+
+__#1 영상 1__<br>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/80700537/188833756-ed099fb8-1c5b-4fd6-9f69-a389487a64b7.JPG" width="350" height="250"/>
+</div> <br>
+🌠 [영상 1 시청하러 가기](https://www.youtube.com/watch?v=m7LAfAoSNYU&list=PLXqZ70DL_8OpOzJjbJVKdIw7nivN18d2O&index=1)
+
+
+__#2 영상 2__<br>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/80700537/188833763-6b2e7a76-7532-4752-9ecc-1e8953b234cd.JPG" width="350" height="250"/>
+</div> <br>
+🌠 [영상 2 시청하러 가기](https://www.youtube.com/watch?v=VWNyDYlmNVE&list=PLXqZ70DL_8OpOzJjbJVKdIw7nivN18d2O&index=2)
+
+
+__#3 영상 3__<br>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/80700537/188833772-9bbde1e3-dabd-4e0a-ae66-aee12a7916a0.JPG" width="350" height="250"/>
+</div> <br>
+🌠 [영상 3 시청하러 가기](https://www.youtube.com/watch?v=1QCsn8tHLl4&list=PLXqZ70DL_8OpOzJjbJVKdIw7nivN18d2O&index=3)
+
+
+__#4 영상 4__<br>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/80700537/188833789-06ec5ee2-5e6f-414e-9131-5af6666e238c.JPG" width="350" height="250"/>
+</div> <br>
+🌠 [영상 4 시청하러 가기](https://www.youtube.com/watch?v=EjBetpMZBPo&list=PLXqZ70DL_8OpOzJjbJVKdIw7nivN18d2O&index=4)
 
 ### 🎰 Number of objects per class (클래스별 탐지 객체 수)
 
