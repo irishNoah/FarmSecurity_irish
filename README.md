@@ -113,7 +113,7 @@ __1. 150장__
 </div>
 
 :stars: 위 표에서 파란색 선은 Avg Loss, 빨간색 선은 IoU를 지칭<br>
-:stars: 150장에서 Avg Loss는 Iteration이 커질수록 감소, IoU는 Itration이 커질수록 증가<br><br>
+:stars: 150장에서 Avg Loss는 Iteration이 커질수록 감소, IoU는 Itration이 커질수록 증가 <br>
 
 __2. 750장__
 <div align="center">
@@ -124,7 +124,7 @@ __2. 750장__
 :stars: 150장과 동일하게 750장에서도 Avg Loss는 Iteration이 커질수록 감소, IoU는 Itration이 커질수록 증가<br><br>
 
 __3. 공통점__ <br>
-:stars: 이미지 수와 상관없이 Iteration이 증가할수록, 대부분 Avg Loss는 감소 / IoU는 증가한다는 점을 알 수 있음<br><br><br><br>
+:stars: 이미지 수와 상관없이 Iteration이 증가할수록, 대부분 Avg Loss는 감소 / IoU는 증가한다는 점을 알 수 있음<br><br>
 
 __#2 mAP 측면__
 
@@ -137,7 +137,7 @@ __1. 이미지 수 기준(총 150장 vs 총 750장)__ <br>
 
 :stars: 150장의 mAP는 58.87%인 반면, 750장은 mAP가 70.97%로 약 12% 정도 차이를 보임<br>
 :stars: 750장이 확실히 mAP가 높은 것을 알 수 있음<br>
-:stars: 이를 통해 사진 수가 많을수록 mAP가 높다는 것을 알 수 있음<br><br><br>
+:stars: 이를 통해 사진 수가 많을수록 mAP가 높다는 것을 알 수 있음<br><br>
 
 __2) Iteration 기준(6000번 vs 9000번)__ <br>
 :heavy_check_mark: 동일한 이미지 수에서 Iteration이 차이날 경우 Avg Loss, IoU의 수치는 상호 간 약간의 차이가 있을 수 있으나 6000번과 9000번의 그래프 형상은 비슷한 모습이므로, Avg Loss와 IoU는 생략하였음<br>
@@ -148,8 +148,6 @@ __2) Iteration 기준(6000번 vs 9000번)__ <br>
 
 :stars: 이미지 수가 차이났을 때의 mAP는 확연한 차이가 있었으나, 이미지 수가 동일한 상황 속에서 Iteration이 3000번 정도나 차이가 남에도 불구하고 두 mAP의 차이는 1.2정도밖에 나지 않음<br>
 :stars: 즉, Iteration의 차이는 mAP에 큰 영향을 미치지 않는다는 것을 알 수 있음<br>
-
-<br>
 
 ## :two: 기법을 적용한 정확도 개선 확인 <br>
 ✔️ 1️⃣에서 확인할 수 있듯이 이미지 수를 늘릴수록, mAP 등 정확도가 높아진다는 것을 알 수 있음 <br>
@@ -253,7 +251,7 @@ __2) Iteration 기준(6000번 vs 9000번)__ <br>
 ✔️ 하지만 __날씨 및 환경이 상대적으로 좋지 않을 경우(예 : 눈/비/일출/일몰), 이러한 것이 객체 인식에 영향을 줄 수 있음__ <br>
 ✔️ 이에 따라, 본 연구팀은 __날씨 및 환경이 좋았던 상황에서 77% mAP를 기록하기 위해 750장의 dataset이 필요한 것처럼, 날씨 및 환경이 좋지 않을 경우 약 77%를 기록하기 위해, 얼마나 많은 dataset이 필요한지 확인해보기로 했음__ <br>
 ✔️ 이에 따라, 각 종류별 사진들을 눈/비/일출&일몰/밤 필터 총 4개와 합성하여 총 750장의 이미지를 생성 <br>
-✔️ 각 필터 적용된 종류별 구성은 다음과 같음 > 눈(65장)+비(60장)+일출&일몰(65장)+밤(60장) > 한 종류당 250장 <br>
+✔️ 각 필터 적용된 종류별 구성은 다음과 같음 > 일출&일몰(60장)+눈(60장)+비(65장)+밤(65장) > 한 종류당 250장 <br>
 
 __1. 이미지 생성__  <br>
 🌠 각 필터와, 동일한 동물 이미지에 대한 결과의 예시는 아래와 같음  <br>
@@ -267,11 +265,26 @@ __#1 이미지 필터__  <br>
 __#2 필터 적용 이미지__  <br>
 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/80700537/180904530-f19a422f-12e5-4581-a4ab-17bd652ea076.JPG" alt="img-filters-results" width="500" height="300"/></div> <br><br>
+  <img src="https://user-images.githubusercontent.com/80700537/180904530-f19a422f-12e5-4581-a4ab-17bd652ea076.JPG" alt="img-filters-results" width="500" height="300"/></div> <br>
   
-__#3 필터 적용 mAP__ <br>
-- 학습 후 mAP 그래프 이미지 필요
-<br><br> 
+__#3 학습 이후 test한 이미지__ <br>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/80700537/188819244-b93ff5a4-b2a0-42bd-8b2d-29df0471270b.JPG" alt="img-filters-results" width="500" height="300"/></div> <br>
+✔️ 해당 이미지는 비 필터가 적용된 동물(animal) 사진임 <br>
+✔️ 필터가 적용돼도 잘 탐지하는 것을 확인할 수 있음 <br>
+    
+<br>
+
+__#4 필터 적용 mAP__ <br>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/80700537/188819737-7d46334a-f391-4063-9b63-b299daa88df0.JPG" alt="" width="500" height="300"/></div> <br>
+<br>
+
+__#5 결과__ <br>
+✔️ 필터가 적용되지 않은 mAP와 적용된 mAP는 각각 __약 77%와 74%로로, 3% 정도의 차이를 기록__ <br>
+✔️ 해당 과정을 실험하기 전에는 필터가 적용된 것이 안된 것보다 __mAP 측면에서 10~15% 정도 낮을 것으로 예상__ <br>
+✔️ 그러나, 필터가 적용된 것의 mAP가 안된 것보다 약 3% 낮기는 하나, __필터가 적용된 것을 감안하였을 때 예상보다는 많이 좋은 mAP를 산출__ <br>
+✔️ 실제 상황에서는 적용된 필터보다 더 다양한 날씨 및 환경이 존재하겠으나, __특별한 경우가 아닐 경우 대부분 상황에서도 객체 인식을 정상적으로 수행할 것으로 기대 가능__ <br>
 
 __#4 참고 자료__ <br>
 1. [전·후처리를 이용한 딥러닝 기반의 주차여부인식](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002519323) <br>
