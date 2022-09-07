@@ -249,6 +249,7 @@ __#2 영상 2__<br>
 <div align="center">
   <img src="https://user-images.githubusercontent.com/80700537/188833763-6b2e7a76-7532-4752-9ecc-1e8953b234cd.JPG" width="350" height="250"/>
 </div> <br>
+
 🌠 [영상 2 시청하러 가기](https://www.youtube.com/watch?v=VWNyDYlmNVE&list=PLXqZ70DL_8OpOzJjbJVKdIw7nivN18d2O&index=2) <br>
 
 
@@ -256,6 +257,7 @@ __#3 영상 3__<br>
 <div align="center">
   <img src="https://user-images.githubusercontent.com/80700537/188833772-9bbde1e3-dabd-4e0a-ae66-aee12a7916a0.JPG" width="350" height="250"/>
 </div> <br>
+
 🌠 [영상 3 시청하러 가기](https://www.youtube.com/watch?v=1QCsn8tHLl4&list=PLXqZ70DL_8OpOzJjbJVKdIw7nivN18d2O&index=3) <br>
 
 
@@ -263,6 +265,7 @@ __#4 영상 4__<br>
 <div align="center">
   <img src="https://user-images.githubusercontent.com/80700537/188833789-06ec5ee2-5e6f-414e-9131-5af6666e238c.JPG" width="350" height="250"/>
 </div> <br>
+
 🌠 [영상 4 시청하러 가기](https://www.youtube.com/watch?v=EjBetpMZBPo&list=PLXqZ70DL_8OpOzJjbJVKdIw7nivN18d2O&index=4) <br>
 
 ### 🎰 Number of objects per class (클래스별 탐지 객체 수)
