@@ -286,7 +286,7 @@ __#5 결과__ <br>
 ✔️ 그러나, 필터가 적용된 것의 mAP가 안된 것보다 약 3% 낮기는 하나, __필터가 적용된 것을 감안하였을 때 예상보다는 많이 좋은 mAP를 산출__ <br>
 ✔️ 실제 상황에서는 적용된 필터보다 더 다양한 날씨 및 환경이 존재하겠으나, __특별한 경우가 아닐 경우 대부분 상황에서도 객체 인식을 정상적으로 수행할 것으로 기대 가능__ <br>
 
-__#4 참고 자료__ <br>
+__#6 참고 자료__ <br>
 1. [전·후처리를 이용한 딥러닝 기반의 주차여부인식](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002519323) <br>
 2. [파이썬 코드를 이용한 파이카메라 제어](https://neosarchizo.gitbooks.io/raspberrypiforsejonguniv/content/chapter4.html) <br>
 
