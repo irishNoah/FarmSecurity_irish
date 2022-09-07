@@ -235,7 +235,11 @@ __2) Iteration 기준(6000번 vs 9000번)__ <br>
 
 ### 🎸 달라진 결과 확인(동영상)<br>
 ✔️ README.md에 동영상(GIF)를 올리려 했으나, 동영상 용량 문제로 인해, 각 영상 별 대표 이미지와 각 영상 설명란에 유튜브 링크를 첨부하였습니다.<br>
-✔️ 확실한 차이는 각 영상 별 이미지보다 유튜브에 더 잘 보이기 때문에, 유튜브 링크를 통해 차이를 꼭 비교하시길 바랍니다.<br><br>
+✔️ 확실한 차이는 각 영상 별 이미지보다 유튜브에 더 잘 보이기 때문에, 유튜브 링크를 통해 차이를 꼭 비교하시길 바랍니다.<br>
+✔️ 각 유튜브 영상에서 가운데를 기준으로 __왼쪽이 old version, 오른쪽이 new version에 해당합니다.__ <br>
+✔️ __old version은 명확한 전처리 이전의 학습 결과물로 동영상을 test한 것입니다.__ <br>
+✔️ __new version은 명확한 전처리 이후의 학습 결과물로 동영상을 test한 것입니다.__ <br>
+✔️ 탐지 개체마다 Bounding Box가 존재하는데, __Red Box는 animal, Blue Box는 bird, Green Box는 human으로 Yolo가 탐지했을 때 생깁니다.__ <br><br>
 
 __#1 영상 1__<br>
 <div align="center">
@@ -243,7 +247,8 @@ __#1 영상 1__<br>
 </div> <br>
 
 🌠 [영상 1 시청하러 가기](https://www.youtube.com/watch?v=m7LAfAoSNYU&list=PLXqZ70DL_8OpOzJjbJVKdIw7nivN18d2O&index=1) <br>
-
+🌠 old version에서는 __한 개체에 여러개의 Bounding Box가 생성__ <br>
+🌠 new version에서는 __한 개체에 하나의 Bounding Box가 생성__ <br><br>
 
 __#2 영상 2__<br>
 <div align="center">
@@ -251,7 +256,8 @@ __#2 영상 2__<br>
 </div> <br>
 
 🌠 [영상 2 시청하러 가기](https://www.youtube.com/watch?v=VWNyDYlmNVE&list=PLXqZ70DL_8OpOzJjbJVKdIw7nivN18d2O&index=2) <br>
-
+🌠 old version에서는 다람쥐가 나무 위에 있어서 __다람쥐를 animal이 아닌 bird로 인식__ <br>
+🌠 new version에서는 __다람쥐를 animal로도 인식함. 다만, 다람쥐를 animal, bird로 동시에 인식.__ 해당 문제는 지속적인 학습을 통해 해결해야 할 필요성이 있음 <br><br>
 
 __#3 영상 3__<br>
 <div align="center">
@@ -259,7 +265,8 @@ __#3 영상 3__<br>
 </div> <br>
 
 🌠 [영상 3 시청하러 가기](https://www.youtube.com/watch?v=1QCsn8tHLl4&list=PLXqZ70DL_8OpOzJjbJVKdIw7nivN18d2O&index=3) <br>
-
+🌠 old version에서는 __새때 중 대부분 또는 일부 새를 인식하지 못하였음__ <br>
+🌠 new version에서는 __새때 중 대부분의 새를 인식__ <br><br>
 
 __#4 영상 4__<br>
 <div align="center">
@@ -267,6 +274,9 @@ __#4 영상 4__<br>
 </div> <br>
 
 🌠 [영상 4 시청하러 가기](https://www.youtube.com/watch?v=EjBetpMZBPo&list=PLXqZ70DL_8OpOzJjbJVKdIw7nivN18d2O&index=4) <br>
+🌠 old version에서는 __사람을 사람이 아닌 새로 인__식 <br>
+🌠 new version에서는 __사람을 대부분 사람으로 인식.__ 일부는 아직 새로 인식하는데, 해당 문제는 지속적인 학습을 통해 해결해야 할 필요성이 있음 <br><br>
+
 
 ### 🎰 Number of objects per class (클래스별 탐지 객체 수)
 
