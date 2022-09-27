@@ -125,10 +125,9 @@ __2. 750장__
 
 __3. 2250장__
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/80700537/192546039-d4f4b0e0-d09b-4910-8cb7-52236db6e0de.png" alt="750_dataset_6000_train_chart" width="500" height="500"/> <br>
+  <img src="https://user-images.githubusercontent.com/80700537/192546039-d4f4b0e0-d09b-4910-8cb7-52236db6e0de.png" alt="750_dataset_6000_train_chart" width="500" height="500"/> </div> <br>
   
-
-:stars: 각 선이 의미하는 바는 150장의 표와 동일<br>
+:stars: 각 선이 의미하는 바는 150장 및 750장 표와 동일<br>
 :stars: 150장 및 750장과 동일하게 2250장에서도 Avg Loss는 Iteration이 커질수록 감소, IoU는 Itration이 커질수록 증가<br><br>
 
 __4. 공통점__ <br>
